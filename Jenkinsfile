@@ -6,6 +6,6 @@ node {
     sh 'mvn package'
      }
     stage('Deploy into container') {
-    deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'test-server', path: '', url: 'http://172.31.28.199:8080')], contextPath: '/dev-app-scripted', war: '**/*.war'
+    deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'test-server', path: '', url: 'http://172.31.28.199:8080')], contextPath: '/dev-app-script', war: '**/*.war'
 }
 }
